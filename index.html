@@ -1,0 +1,68 @@
+ <!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Curso JQUERY</title>
+    <style media="screen">
+    *{
+      border: 1px solid aqua;
+      color:green
+    }
+    </style>
+  </head>
+  <body>
+    <h1>Titulo de la entrada</h1>
+    <h2>Solo es una sombra</h2>
+    <p>parrafo
+      <p>parrafo 2</p>
+      <p>parrafo 3</p>
+    </p>
+
+    <ul>
+    <li>stay</li>
+    <li>rock</li>
+    <li>tango</li>
+    <li>salsa</li>
+    </ul>
+
+    <ul>
+    <li>determinated</li>
+    <li>rock</li>
+    <li>tango</li>
+    <li>salsa</li>
+    </ul>
+    <button id="btn2" type="button" name="button">SAY JA</button>
+    <button id="btn1" type="button" name="button">SAY JA 1</button>
+    <button id="btn3" type="button" name="button">ENTER</button>
+    <button id="btn4" type="button" name="button">DEJAR</button>
+    <button id="btnD" type="button" name="button">Mouse down</button>
+    <button id="btnU" type="button" name="button">Mouse up</button>
+
+    <script src="jquery.min.js"></script>
+    <script>
+      $(document).ready(function(){
+
+        $("ul li:first-child").hide(1000);
+        $("#btn2").click(function(){
+          $("ul").hide(2000);
+        });
+        $("#btn1").click(function(){
+          $("ul").show(2000);
+        });
+        $("#btn3").mouseenter(function(){
+          $("h2").hide(2000);
+        });
+        $("#btn4").mouseleave(function(){
+          $("h2").show(2000);
+        });
+        $("#btnD").mousedown(function(){
+          $("h1").hide(2000);
+        });
+        $("#btnU").mouseup(function(){
+          $("h1").show(2000);
+        });
+        });
+    </script>
+
+  </body>
+</html>
